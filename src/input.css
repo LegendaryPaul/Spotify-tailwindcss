@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 .container{
-    @apply mx-auto max-w-[140rem] w-full;
+    @apply mx-auto max-w-[90rem] w-full;
+}
+.container2{
+    @apply mx-auto max-w-[115rem] w-full;
 }
 @layer components{
     .btn{
@@ -81,5 +84,72 @@
     }
     .footer__links ul li a{
         @apply text-[.6rem] lg:text-[.8rem] hover:text-green-500;
+    }
+
+
+
+    /* ----------DEVELOPERS PAGE-------------- */
+
+    .dev__menu span{
+        @apply bg-white w-[2rem] h-[.2rem] block mb-[.3rem] ease-out duration-[.3s];
+    }
+    .dev__menu.open span:first-child{
+        @apply translate-y-[1rem] rotate-[40deg];
+    }
+    .dev__menu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .dev__menu.open span:last-child{
+        @apply rotate-[-40deg];
+    }
+    .dev__nav ul li{
+        @apply p-[1.5rem] lg:p-0 lg:py-[1.5rem] lg:mr-[2rem];
+    }
+    .dev__nav ul li:not(:last-child){
+        @apply border-b-[1px] border-gray-600 lg:border-none;
+    }
+    .slidee{
+        @apply ease-in-out duration-[.5s];
+    }
+
+    .slidee.show{
+        @apply top-[32rem] ease-in-out duration-[.5s];
+    }
+    .dev__banner__text h4{
+        @apply font-bold;
+    }
+    
+    .dev__nav ul li{
+        @apply ease-in-out duration-[.5s];
+    }
+    .dev__nav ul li:nth-child(2):hover .docc{
+        @apply lg:top-[4.5rem] lg:h-[20rem] ease-in duration-[.5s];
+    }
+    .dev__nav ul li:nth-child(4):hover .comm{
+        @apply lg:top-[4.5rem] lg:h-[8rem] ease-in-out duration-[.5s];
+    }
+    .dev__nav ul .uses:last-child:hover .uses__drop{
+        @apply lg:top-[4.5rem] lg:h-[12rem] ease-in-out duration-[.5s];
+    }
+    .comm li{
+        @apply hover:text-green-500 lg:p-[2rem];
+    }
+    
+    .uses ul li ul li {
+        @apply p-0;
+    }
+    .docc li ul li {
+        @apply p-0 lg:py-[.3rem];
+    }
+
+    .explore__item ul li a{
+        @apply flex flex-col items-center text-center;
+    }
+    .explore__item ul li a img {
+        @apply mb-[.6rem];
+    }
+
+    .active{
+        @apply border-b-[4px] border-green-500;
     }
 }
